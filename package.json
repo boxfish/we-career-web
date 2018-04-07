@@ -11,9 +11,11 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "gatsby": "^1.9.213",
+    "gatsby-image": "^1.0.43",
     "gatsby-link": "^1.6.37",
     "gatsby-plugin-catch-links": "^1.0.19",
     "gatsby-plugin-favicon": "^2.1.1",
+    "gatsby-plugin-i18n": "^0.4.2",
     "gatsby-plugin-jss": "^1.5.12",
     "gatsby-plugin-lodash": "^1.0.11",
     "gatsby-plugin-netlify-cms": "^1.0.9",
@@ -24,6 +26,8 @@
     "gatsby-source-filesystem": "^1.5.23",
     "gatsby-transformer-remark": "^1.7.33",
     "gatsby-transformer-sharp": "^1.6.21",
+    "gatsby-transformer-yaml": "^1.5.16",
+    "intl": "^1.2.5",
     "lodash": "^4.17.5",
     "lodash-webpack-plugin": "^0.11.4",
     "material-ui": "^1.0.0-beta.40",
@@ -31,7 +35,10 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-helmet": "^5.2.0",
+    "react-intl": "^2.4.0",
+    "react-swipeable-views": "^0.12.13",
     "reset-css": "^3.0.0",
+    "sharp": "lovell/sharp",
     "typeface-roboto": "^0.0.54"
   },
   "keywords": [

@@ -7,6 +7,9 @@ import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import IconButton from 'material-ui/IconButton';
 import { darken, lighten } from 'material-ui/styles/colorManipulator';
+import languages from '../../utils/languages';
+import { get } from 'lodash';
+import { FormattedMessage } from 'react-intl';
 
 import logo from '../../img/logo.png';
 
@@ -26,7 +29,7 @@ const styles = theme => {
   }
 };
 
-const Header = ({ classes, site }) =>
+const Header = ({ classes, site, langs }) =>
   <AppBar position="static" className={classes.root}>
     <Toolbar>
       <Link to="/">
@@ -36,11 +39,17 @@ const Header = ({ classes, site }) =>
         { site.siteMetadata.description }
       </Typography> */}
       <div className={classes.filler} />
-      <Button color="primary" component={Link} to="/services">Services</Button>
-      <Button color="primary" component={Link} to="/events">Events</Button>
-      <Button color="primary" component={Link} to="/jobs">Jobs</Button>
-      <Button color="primary" component={Link} to="/blog">Blog</Button>
-      <Button color="primary" component={Link} to="/about">Company</Button>
+      <Button color="primary" component={Link} to="/services"><FormattedMessage id="nav.services" /></Button>
+      <Button color="primary" component={Link} to="/events"><FormattedMessage id="nav.events" /></Button>
+      <Button color="primary" component={Link} to="/jobs"><FormattedMessage id="nav.jobs" /></Button>
+      <Button color="primary" component={Link} to="/articles"><FormattedMessage id="nav.articles" /></Button>
+      <Button color="primary" component={Link} to="/about"><FormattedMessage id="nav.company" /></Button>
+      {
+        langs.filter((lang) => !lang.selected)
+          .map((lang) => (
+            <Button color="primary" component={Link} to={lang.link} key={lang.langKey}>{get(languages, ['names', lang.langKey])}</Button>
+          ))
+      }
     </Toolbar>
   </AppBar>
 

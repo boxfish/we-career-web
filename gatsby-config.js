@@ -1,4 +1,5 @@
 const pkg = require('./package.json');
+const languages = require('./src/utils/languages');
 
 module.exports = {
   siteMetadata: {
@@ -7,6 +8,7 @@ module.exports = {
     version: pkg.version,
     siteUrl: pkg.homepage,
     keywords: pkg.keywords,
+    languages,
   },
   plugins: [
     {
@@ -28,14 +30,23 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-plugin-i18n',
+      options: {
+        langKeyForNull: 'any',
+        langKeyDefault: languages.defaultLangKey,
+        useLangKeyLayout: true
+      }
+    },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-transformer-yaml',
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [],
       },
     },
     'gatsby-plugin-catch-links',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     'gatsby-plugin-jss',
     'gatsby-plugin-lodash',
     'gatsby-plugin-react-helmet',
@@ -44,6 +55,13 @@ module.exports = {
       options: {
         color: `#9D7CBF`,
         showSpinner: false,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/content`,
+        name: 'content',
       },
     },
     {

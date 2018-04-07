@@ -1,0 +1,26 @@
+language: en
+services:
+  - Branding:
+    name: Branding
+    title: Employer Branding
+    image: ../img/branding-en.png
+    description:
+      - Customized employer branding campaign and job promotion
+  - Recruiting:
+    name: Recruiting
+    title: Recruiting Outsourcing
+    image: ../img/recruiting-en.png
+    description:
+      - Outsourcing of early stage recruiting process
+  - Organizing:
+    name: Organizing
+    title: Info & Interview Session
+    image: ../img/organizing-en.png
+    description:
+      - Recruiting events and express interviews
+  - Headhunting:
+    name: Headhunting
+    title: Headhunting
+    image: ../img/headhunting-en.png
+    description:
+      - Hire-oriented contingency talent search
