@@ -10,20 +10,19 @@ collections:
     label: Pages
     files:
       - file: src/content/introduction/en.yml
-      - name: introduction-en
-      - label: Introduction
-      - fields:
-        - {label: Heading, name: heading, widget: string}
-        - {label: Description, name: description, widget: string}
-        - {label: Achievements, name: achievements, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Value, name: value, widget: string}]}
+        name: introduction-en
+        label: Introduction
+        fields:
+          - {label: Heading, name: heading, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Achievements, name: achievements, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Value, name: value, widget: string}]}
       - file: src/content/introduction/zh.yml
-      - name: introduction-zh
-      - label: 中文简介
-      - fields:
-        - {label: Heading, name: heading, widget: string}
-        - {label: Description, name: description, widget: string}
-        - {label: Achievements, name: achievements, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Value, name: value, widget: string}]}
-
+        name: introduction-zh
+        label: 中文简介
+        fields:
+          - {label: Heading, name: heading, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Achievements, name: achievements, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Value, name: value, widget: string}]}
   # - name: "blog"
   #   label: "Blog"
   #   folder: "src/pages/blog"

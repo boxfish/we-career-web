@@ -11,7 +11,10 @@ class RedirectIndex extends React.PureComponent {
     if (typeof window !== 'undefined') {
       const { langs, defaultLangKey } = args.data.site.siteMetadata.languages;
       const langKey = getUserLangKey(langs, defaultLangKey);
-      const homeUrl = withPrefix(`/${langKey}/`);
+      let homeUrl = withPrefix(`/${langKey}/`);
+
+      // add hash if any
+      homeUrl += homeUrl + location.hash;
       console.log('location.href: ', location.href);
       console.log('homeUrl: ', homeUrl);
 
