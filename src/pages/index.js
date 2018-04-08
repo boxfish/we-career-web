@@ -12,6 +12,8 @@ class RedirectIndex extends React.PureComponent {
       const { langs, defaultLangKey } = args.data.site.siteMetadata.languages;
       const langKey = getUserLangKey(langs, defaultLangKey);
       const homeUrl = withPrefix(`/${langKey}/`);
+      console.log('location.href: ', location.href);
+      console.log('homeUrl: ', homeUrl);
 
       // I don`t think this is the best solution
       // I would like to use Gatsby Redirects like:
