@@ -14,9 +14,7 @@ class RedirectIndex extends React.PureComponent {
       let homeUrl = withPrefix(`/${langKey}/`);
 
       // add hash if any
-      homeUrl += homeUrl + location.hash;
-      console.log('location.href: ', location.href);
-      console.log('homeUrl: ', homeUrl);
+      homeUrl += location.hash;
 
       // I don`t think this is the best solution
       // I would like to use Gatsby Redirects like:
