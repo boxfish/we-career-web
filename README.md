@@ -3,6 +3,7 @@
 2. under construction for Events/Jobs/Articles
 3. push to server
 4. set up cms
+5. fix mobile
 5. Jobs
 6. Articles
 7. Events
