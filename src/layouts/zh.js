@@ -3,31 +3,24 @@ import graphql from 'graphql';
 import Layout from './layout';
 import { addLocaleData } from 'react-intl';
 
-import messages from '../content/messages/zh';
 import zh from 'react-intl/locale-data/zh';
 import 'intl/locale-data/jsonp/zh';
+import { getMessages } from '../utils/languages';
+
+import { siteMetadata } from '../utils/fragments';
 
 addLocaleData(zh);
 
 export default (props) => (
   <Layout
     {...props}
-    i18nMessages={messages}
+    i18nMessages={getMessages('zh')}
   />);
 
 export const pageQuery = graphql`
   query LayoutZh {
     site {
-      siteMetadata {
-        title
-        description
-        keywords
-        siteUrl
-        languages {
-          defaultLangKey
-          langs
-        }
-      }
+      ...siteMetadata
     }
   }
 `;

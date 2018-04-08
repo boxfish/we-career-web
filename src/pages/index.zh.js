@@ -1,5 +1,6 @@
 import React from 'react';
 import IndexTemplate from '../templates/index';
+import { siteMetadata, introduction, servicesWithImage, clientsWithLogo, featuredSuccessStories } from '../utils/fragments';
 
 export default ({classes, data}) => {
   return (
@@ -10,36 +11,23 @@ export default ({classes, data}) => {
 export const pageQuery = graphql`
   query IndexZh {
     site {
-      siteMetadata {
-        title
-        description
-      }
+      ...siteMetadata
     }
-    introduction: allIntroductionYaml(filter: {language: {eq: "zh"}}) {
-      edges {
-        node {
-          heading
-          description
-        }
-      }
+    introduction: introductionYaml(language: {eq: "zh"}) {
+      ...introduction
     }
-    services: allServicesYaml(filter: {language: {eq: "zh"}}) {
-      edges {
-        node {
-          services {
-            name
-            title
-            description
-            image {
-              childImageSharp {
-                sizes(maxWidth: 1260) {
-                  ...GatsbyImageSharpSizes_noBase64
-                }
-              }
-            }
-          }
-        }
+    services: servicesYaml(language: {eq: "zh"}) {
+      ...servicesWithImage
+    }
+    clients: allClientsYaml {
+      ...clientsWithLogo
+    }
+    featuredSuccessStories: allMarkdownRemark(filter: {
+      frontmatter: {
+        type: {eq: "success-story"}, featured: {eq: true}, language: {eq: "zh"}
       }
+    }){
+      ...featuredSuccessStories
     }
   }
 `

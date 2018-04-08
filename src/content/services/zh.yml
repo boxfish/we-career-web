@@ -1,28 +1,24 @@
 language: zh
 services:
-  - Branding:
-    name: 雇主推广
+  - id: Branding
     title: 雇主推广
     image: ../img/branding-zh.png
     description:
       - 适应于企业雇主品牌宣传和职位推广
-  - Recruiting:
-    name: 简历精选
+  - id: Recruiting
     title: 简历精选
     image: ../img/recruiting-zh.png
     description:
       - 适应于招聘早期环节外包和候选人搜寻，让企业专注于人才面试关键环节，提高招聘速度和成功率
       - 提供简历收集和筛选、电话面试为企业提供精准的候选人简历
       - 若企业决定对候选人进行面试才收费，并提供高效的面试预约管理
-  - Organizing:
-    name: 宣讲面试
+  - id: Organizing
     title: 宣讲面试
     image: ../img/organizing-zh.png
     description:
       - 适应于企业校园宣讲和社会招聘活动
       - 最大化利用企业高管的有限出行时间，实现雇主品牌的广泛推广和精准候选人集中面试两重收获
-  - Headhunting:
-    name: 高端猎聘
+  - id: Headhunting
     title: 高端猎聘
     image: ../img/headhunting-zh.png
     description:

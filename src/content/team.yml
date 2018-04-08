@@ -1,0 +1,31 @@
+- firstName: Eileen
+  lastName: Stewart
+  title: CEO
+  email: eileen.stewart45@example.com
+  avatar: './img/team-avatar-1.png'
+- firstName: Zachary
+  lastName: Green
+  title: COO
+  email: zachary.green16@example.com
+  avatar: './img/team-avatar-2.png'
+- firstName: Ray
+  lastName: Walters
+  title: Director of Marketing
+  email: ray.walters27@example.com
+  avatar: './img/team-avatar-3.png'
+- firstName: Constance
+  lastName: Flores
+  title: Director of Engineering
+  email: constance.flores71@example.com
+  avatar: './img/team-avatar-4.png'
+- firstName: Jeff
+  lastName: Crawford
+  title: Senior Recuriter
+  email: jeff.crawford22@example.com
+  avatar: './img/team-avatar-5.png'
+- firstName: Tamara
+  lastName: Shaw
+  title: Senior Recuriter
+  email: tamara.shaw66@example.com
+  avatar: './img/team-avatar-6.png'
+

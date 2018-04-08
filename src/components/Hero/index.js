@@ -3,7 +3,7 @@ import Link from "gatsby-link";
 import { withStyles } from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
-import HeroBg from '../../img/hero-bg.png';
+import HeroBg from './hero-bg.png';
 
 const styles = theme => {
   return {

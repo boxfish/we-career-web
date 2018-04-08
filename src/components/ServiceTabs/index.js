@@ -2,10 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
 import Tabs, { Tab } from 'material-ui/Tabs';
 import Typography from 'material-ui/Typography';
 import Grid from 'material-ui/Grid';
 import Img from "gatsby-image";
+
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tabStyles = theme => ({
   root: {
@@ -76,18 +79,19 @@ class ServiceTabs extends React.Component {
           fullWidth
         >
           { services.map((service) => (
-            <Tab key={service.name} label={service.name} />
+            <Tab key={service.id} label={service.title} />
           ))}
         </Tabs>
-        <SwipeableViews
+        <AutoPlaySwipeableViews
+          interval={5000}
           axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
           index={this.state.value}
           onChangeIndex={this.handleChangeIndex}
         >
           { services.map((service) => (
-            <TabContainer key={service.name} dir={theme.direction} service={service} />
+            <TabContainer key={service.id} dir={theme.direction} service={service} />
           ))}
-        </SwipeableViews>
+        </AutoPlaySwipeableViews>
       </div>
     );
   }
