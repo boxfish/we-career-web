@@ -1,3 +1,13 @@
+# TODO
+1. legal pages
+2. under construction for Events/Jobs/Articles
+3. push to server
+4. set up cms
+5. Jobs
+6. Articles
+7. Events
+8. Homepage links to latest Events/Jobs/Articles
+
 # Gatsby + Netlify CMS Starter
 
 This repo contains an example business website that is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org): **[Demo Link](https://gatsby-netlify-cms.netlify.com/)**.
