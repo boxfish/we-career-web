@@ -8,7 +8,7 @@ const en = {
     'nav.articles': 'Articles',
     'nav.about': 'About',
     'section.services': 'Our Services',
-    'section.clients': 'Our Clients',
+    'section.clients': 'Selected Clients',
     'section.successStories': 'Success Stories',
     'section.about.company': 'The Company',
     'section.about.achievements': 'Our Achievements',

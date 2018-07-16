@@ -23,4 +23,4 @@ services:
     image: ../img/headhunting-zh.png
     description:
       - 适应于归国精英人才的招聘服务
-      - 创新收费模式，企业需求越明确，服务费用越低（总费用低于年薪的15%）
+      - 创新收费模式，企业需求越明确，服务费用越低

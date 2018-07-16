@@ -21,6 +21,10 @@ const tabStyles = theme => ({
   title: {
     paddingTop: theme.spacing.unit * 4,
   },
+  description: {
+    paddingLeft: theme.spacing.unit * 6,
+    paddingRight: theme.spacing.unit * 6,
+  },
   image: {
     // maxWidth: '60%',
   }
